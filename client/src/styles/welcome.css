@@ -1,0 +1,325 @@
+/* =========================================
+   WELCOME PAGE
+========================================= */
+
+.welcome-page {
+    min-height: 100vh;
+
+    background: #f4f7fa;
+
+    display: flex;
+    flex-direction: column;
+
+    color: #003b70;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.welcome-content {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 70px 40px 50px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   WELCOME TITLE
+========================================= */
+
+.welcome-title {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.welcome-title h1 {
+    margin: 0;
+
+    font-size: 48px;
+    font-weight: 700;
+
+    color: #003b70;
+
+    letter-spacing: -1px;
+}
+
+.welcome-title p {
+    margin: 8px 0 12px;
+
+    font-size: 18px;
+
+    color: #555;
+}
+
+.welcome-title span {
+    display: block;
+
+    font-size: 16px;
+
+    color: #0066b3;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   TILES
+========================================= */
+
+.welcome-tiles {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   INDIVIDUAL TILE
+========================================= */
+
+.welcome-tile {
+    position: relative;
+
+    min-height: 420px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border: 1px solid #e1e7ed;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* Hover */
+
+.welcome-tile:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 59, 112, 0.15);
+
+    background: #003b70;
+
+    color: white;
+}
+
+
+/* =========================================
+   TILE NUMBER
+========================================= */
+
+.tile-number {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #0066b3;
+
+    letter-spacing: 2px;
+
+    transition: color 0.3s ease;
+}
+
+.welcome-tile:hover .tile-number {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   TILE CONTENT
+========================================= */
+
+.tile-content {
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.tile-content h2 {
+    margin: 0 0 15px;
+
+    font-size: 26px;
+
+    line-height: 1.25;
+
+    color: #003b70;
+
+    transition: color 0.3s ease;
+}
+
+.tile-content p {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    transition: color 0.3s ease;
+}
+
+.welcome-tile:hover .tile-content h2 {
+    color: white;
+}
+
+.welcome-tile:hover .tile-content p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.tile-arrow {
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid #0066b3;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    color: #0066b3;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.welcome-tile:hover .tile-arrow {
+    background: white;
+
+    color: #003b70;
+
+    border-color: white;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.welcome-footer {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid #dde3e8;
+
+    background: white;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+.welcome-footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .welcome-content {
+        padding: 60px 30px 40px;
+    }
+
+    .welcome-title h1 {
+        font-size: 40px;
+    }
+
+    .welcome-tiles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .welcome-tile {
+        min-height: 350px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .welcome-content {
+        padding: 45px 20px 35px;
+    }
+
+    .welcome-title {
+        margin-bottom: 40px;
+    }
+
+    .welcome-title h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .welcome-title p {
+        font-size: 16px;
+    }
+
+    .welcome-title span {
+        font-size: 14px;
+    }
+
+    .welcome-tiles {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .welcome-tile {
+        min-height: 300px;
+
+        padding: 25px;
+    }
+
+    .tile-content h2 {
+        font-size: 23px;
+    }
+}

@@ -3,230 +3,244 @@
 ================================= */
 
 .top-bar {
-  width: 100%;
-  background-color: #444444;
-  border-bottom: 1px solid #dddddd;
-  font-size: 14px;
+    width: 100%;
+    background-color: #444444;
+    border-bottom: 1px solid #dddddd;
+    font-size: 14px;
 }
 
 .top-bar-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 8px 30px;
+    max-width: 1400px;
+    margin: auto;
+    padding: 8px 30px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .top-links a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: 0.2s;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .top-links a:hover {
-  color: #005baa;
+    color: #005baa;
 }
-
 
 /* ==============================
    MAIN NAVBAR
 ================================= */
 
 .navbar {
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    height: 30%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-container {
-  max-width: 1400px;
-  margin: auto;
-  padding: 15px 30px;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0px 0px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
 
 /* ==============================
    LOGO
 ================================= */
 
 .navbar-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo-placeholder {
-  width: 55px;
-  height: 55px;
+    width: 100px;
+    height: 100px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  background-color: #005baa;
-  color: white;
+    color: white;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+/* RIGHT DMT LOGO */
+.logo-placeholder-right {
+    width: 130px;
+    height: 130px;
+
+    margin-left: 14px;
+}
+
+.logo-placeholder-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0;
 }
 
 .logo-text h2 {
-  margin: 0;
-  font-size: 18px;
-  color: #003b70;
+    margin: 0;
+    font-size: 28px;
+    color: #003b70;
 }
 
 .logo-text span {
-  font-size: 12px;
-  color: #666;
+    font-size: 12px;
+    color: #666;
 }
-
 
 /* ==============================
    NAVIGATION LINKS
 ================================= */
 
 .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .nav-links a {
-  position: relative;
+    position: relative;
 
-  padding: 10px 12px;
+    padding: 10px 12px;
 
-  color: #333;
-  text-decoration: none;
+    color: #333;
+    text-decoration: none;
 
-  font-size: 14px;
-  font-weight: 500;
+    font-size: 16px;
+    font-weight: 500;
 
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #005baa;
+    color: #005baa;
 }
-
 
 /* Active link */
 
 .nav-links a.active {
-  color: #005baa;
+    color: #005baa;
 }
 
 .nav-links a.active::after {
-  content: "";
+    content: "";
 
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: 2px;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 2px;
 
-  height: 2px;
+    height: 2px;
 
-  background-color: #005baa;
+    background-color: #005baa;
 }
-
 
 /* ==============================
    MOBILE MENU BUTTON
 ================================= */
 
 .menu-button {
-  display: none;
+    display: none;
 
-  border: none;
-  background: none;
+    border: none;
+    background: none;
 
-  font-size: 28px;
-  cursor: pointer;
+    font-size: 28px;
+    cursor: pointer;
 
-  color: #003b70;
+    color: #003b70;
 }
-
 
 /* ==============================
    RESPONSIVE
 ================================= */
 
 @media (max-width: 1100px) {
+    .nav-links {
+        gap: 0;
+    }
 
-  .nav-links {
-    gap: 0;
-  }
-
-  .nav-links a {
-    padding: 10px 8px;
-    font-size: 13px;
-  }
-
+    .nav-links a {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
 }
-
 
 @media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
 
-  .nav-links {
-    display: none;
-  }
+    .menu-button {
+        display: block;
+    }
 
-  .menu-button {
-    display: block;
-  }
+    .navbar-container {
+        padding: 12px 20px;
+    }
 
-  .navbar-container {
-    padding: 12px 20px;
-  }
-
-  .logo-text h2 {
-    font-size: 16px;
-  }
-
+    .logo-text h2 {
+        font-size: 16px;
+    }
 }
 
-
 @media (max-width: 500px) {
+    .top-bar-container {
+        padding: 8px 15px;
+    }
 
-  .top-bar-container {
-    padding: 8px 15px;
-  }
+    .top-bar-container > span {
+        font-size: 12px;
+    }
 
-  .top-bar-container > span {
-    font-size: 12px;
-  }
+    .top-links {
+        gap: 8px;
+    }
 
-  .top-links {
-    gap: 8px;
-  }
+    .top-links a {
+        font-size: 12px;
+    }
 
-  .top-links a {
-    font-size: 12px;
-  }
+    .logo-placeholder {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
 
-  .logo-placeholder {
-    width: 45px;
-    height: 45px;
-    font-size: 16px;
-  }
-
-  .logo-text h2 {
-    font-size: 14px;
-  }
-
+    .logo-text h2 {
+        font-size: 14px;
+    }
 }
