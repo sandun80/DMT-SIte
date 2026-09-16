@@ -65,14 +65,14 @@ function Navbar() {
                             About Us
                         </NavLink>
 
-                        <NavLink
+                        {/* <NavLink
                             to="/services"
                             className={({ isActive }) =>
                                 isActive ? "active" : ""
                             }
                         >
                             Services
-                        </NavLink>
+                        </NavLink> */}
 
                         <NavLink
                             to="/downloads"
