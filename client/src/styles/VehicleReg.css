@@ -3,6 +3,20 @@
 .services {
     padding: 70px 8%;
     background: white;
+    opacity: 0;
+    transform: translateY(28px);
+    animation: sectionFadeUp 0.9s ease forwards;
+}
+
+@keyframes sectionFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(38px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ==============================
@@ -18,6 +32,18 @@
 
 .accordion-item {
     border-bottom: 10px solid #e5e5e5;
+    opacity: 0;
+    transform: translateY(22px);
+    animation: sectionFadeUp 0.8s ease forwards;
+    animation-delay: 0.45s;
+}
+
+.accordion-item:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.accordion-item:nth-child(3) {
+    animation-delay: 0.95s;
 }
 
 /* Button */
@@ -124,6 +150,10 @@
     border-radius: 19px;
     background: white;
     box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(22px);
+    animation: sectionFadeUp 0.8s ease forwards;
+    animation-delay: 0.2s;
 }
 
 .service-card:nth-child(2) {
