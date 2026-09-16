@@ -22,7 +22,7 @@ function AppContent() {
         <Route path="/vehicle-inspection" element={<VehicleInspection />} />
         <Route path="/driving-licence" element={<DrivingLicence />} />
         <Route path="/about" element={<Aboutus />} />
-        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/other-services" element={<ServicesPage />} />
       </Routes>
 
       <Footer />

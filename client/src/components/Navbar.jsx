@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/Navbar.css";
 import { NavLink } from "react-router-dom";
 import emblem from "../assets/Emblem.png";
-import dmtLogo from "../assets/DMT_logo.png"
+import dmtLogo from "../assets/DMT_logo.png";
 
 function Navbar() {
     return (
@@ -26,10 +26,7 @@ function Navbar() {
                     {/* Logo */}
                     <div className="navbar-logo">
                         <div className="logo-placeholder">
-                            <img
-                                src={emblem}
-                                alt="Emblem"
-                            />
+                            <img src={emblem} alt="Emblem" />
                         </div>
 
                         <div className="logo-text">
@@ -90,6 +87,10 @@ function Navbar() {
                             }
                         >
                             Contact
+                        </NavLink>
+
+                        <NavLink to="/login" className="login-btn">
+                            Login
                         </NavLink>
                     </div>
 
