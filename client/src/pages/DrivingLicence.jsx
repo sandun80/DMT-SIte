@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/VehicleReg.css";
+import "../styles/DrivingLicence.css";
 
 function DrivingLicence() {
     const [openItem, setOpenItem] = useState(null);
