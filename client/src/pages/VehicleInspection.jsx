@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/VehicleInspection.css";
+import "../styles/ServiceAccordion.css";
 
 function VehicleInspection() {
     const [openItem, setOpenItem] = useState(null);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/DrivingLicence.css";
+import "../styles/ServiceAccordion.css";
 
 function DrivingLicence() {
     const [openItem, setOpenItem] = useState(null);

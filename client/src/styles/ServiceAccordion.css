@@ -1,9 +1,34 @@
-/* Services */
+/* ==============================
+   SERVICES SECTION
+================================= */
 
 .services {
     padding: 70px 8%;
     background: white;
+
+    opacity: 0;
+    transform: translateY(28px);
+
+    animation: sectionFadeUp 0.9s ease forwards;
 }
+
+
+/* ==============================
+   ANIMATION
+================================= */
+
+@keyframes sectionFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(38px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* ==============================
    SERVICE ACCORDION
@@ -14,29 +39,50 @@
     border-top: 1px solid #e5e5e5;
 }
 
-/* Accordion Item */
-
 .accordion-item {
     border-bottom: 10px solid #e5e5e5;
+
+    opacity: 0;
+
+    transform: translateY(22px);
+
+    animation: sectionFadeUp 0.8s ease forwards;
+
+    animation-delay: 0.45s;
 }
 
-/* Button */
+.accordion-item:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.accordion-item:nth-child(3) {
+    animation-delay: 0.95s;
+}
+
+
+/* ==============================
+   ACCORDION BUTTON
+================================= */
 
 .accordion-button {
     width: 100%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 26px 0;
 
     border: none;
+
     background: none;
 
     color: #003b70;
 
     font-size: 15px;
+
     font-weight: 600;
 
     text-align: left;
@@ -50,14 +96,20 @@
     color: #0066b3;
 }
 
-/* + / - */
+
+/* ==============================
+   PLUS / MINUS
+================================= */
 
 .accordion-icon {
     width: 25px;
+
     height: 25px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid #0066b3;
@@ -67,10 +119,14 @@
     color: #0066b3;
 
     font-size: 18px;
+
     font-weight: 400;
 }
 
-/* Expanded Content */
+
+/* ==============================
+   EXPANDED CONTENT
+================================= */
 
 .accordion-content {
     padding: 0 10px 20px 0;
@@ -86,7 +142,37 @@
     margin: 0 0 12px;
 }
 
-/* Link inside expanded content */
+.accordion-content h4 {
+    margin: 0 0 15px;
+
+    color: #003b70;
+
+    font-size: 24px;
+}
+
+.accordion-content h5 {
+    margin: 25px 0 10px;
+
+    color: #003b70;
+
+    font-size: 20px;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+    margin: 10px 0 20px;
+
+    padding-left: 25px;
+}
+
+.accordion-content li {
+    margin-bottom: 8px;
+}
+
+
+/* ==============================
+   LINKS
+================================= */
 
 .accordion-content a {
     display: inline-block;
@@ -104,26 +190,59 @@
     text-decoration: underline;
 }
 
+
+/* ==============================
+   SERVICE TITLE
+================================= */
+
 .services h2 {
     text-align: center;
+
     font-size: 32px;
+
     margin-bottom: 40px;
 }
 
+
+/* ==============================
+   SERVICE GRID
+================================= */
+
 .service-grid {
     display: flex;
+
     justify-content: center;
+
     gap: 25px;
 }
 
+
+/* ==============================
+   SERVICE CARD
+================================= */
+
 .service-card {
     width: 1000px;
+
     padding: 30px;
+
     border: 1px solid #e5e7eb;
+
     border-top: 4px solid #1d4ed8;
+
     border-radius: 19px;
+
     background: white;
+
     box-sizing: border-box;
+
+    opacity: 0;
+
+    transform: translateY(22px);
+
+    animation: sectionFadeUp 0.8s ease forwards;
+
+    animation-delay: 0.2s;
 }
 
 .service-card:nth-child(2) {
@@ -136,31 +255,41 @@
 
 .service-num {
     font-size: 13px;
+
     color: #6b7280;
 }
 
 .service-card h3 {
     margin: 2px 0 12px;
+
     font-size: 30px;
 }
 
-.service-card p {
+.service-card > p {
     color: #6b7280;
+
     font-size: 18px;
+
     line-height: 1.6;
+
     margin-bottom: 15px;
 }
 
 .service-card ul {
     list-style: none;
+
     margin: 0 0 20px;
+
     padding: 0;
+
     font-size: 13.5px;
 }
 
 .service-card li {
     padding: 8px 0;
+
     border-top: 1px solid #e5e7eb;
+
     color: #374151;
 }
 
@@ -168,14 +297,26 @@
     border-top: none;
 }
 
+
+/* ==============================
+   OPEN HUB
+================================= */
+
 .service-link {
     display: inline-block;
+
     border: none;
+
     font-size: large;
+
     background: transparent;
+
     color: #1d4ed8;
+
     font-weight: bold;
+
     text-decoration: none;
+
     cursor: pointer;
 }
 
@@ -183,16 +324,23 @@
     text-decoration: underline;
 }
 
-/* Responsive */
+
+/* ==============================
+   RESPONSIVE
+================================= */
 
 @media (max-width: 900px) {
+
     .service-grid {
         grid-template-columns: 1fr;
     }
+
 }
 
 @media (max-width: 600px) {
+
     .service-grid {
         grid-template-columns: 1fr;
     }
+
 }

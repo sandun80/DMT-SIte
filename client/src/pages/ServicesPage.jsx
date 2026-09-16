@@ -2,81 +2,84 @@ import "../styles/ServicesPage.css";
 
 function ServicesPage() {
     return (
-        <div className="services-page">
+        <div className="other-services-page">
 
-            <section className="services-header">
-                <div className="services-header-content">
-                    <h1>Our Services</h1>
-                    <p>
-                        Department of Motor Traffic - Sri Lanka
-                    </p>
-                </div>
-            </section>
+            <div className="other-services-header">
+                <h1>Other Services</h1>
+                <p>
+                    Explore additional services provided by the
+                    Department of Motor Traffic.
+                </p>
+            </div>
 
-            <section className="services-content">
+            <section className="other-services-section">
 
-                <div className="services-intro">
-                    <h2>Services Provided by DMT</h2>
+                <h2>Services You May Need</h2>
 
-                    <p>
-                        The Department of Motor Traffic provides a wide range
-                        of services related to motor vehicles, driving
-                        licences and other motor traffic requirements.
-                    </p>
-                </div>
+                <p className="other-services-intro">
+                    Find information and access services related to
+                    vehicles, documents, number plates and other
+                    motor traffic requirements.
+                </p>
 
-                <div className="services-grid">
+                <div className="other-services-grid">
 
-                    <div className="service-card">
-                        <h3>Vehicle Registration</h3>
-                        <p>
-                            Services related to registering new and existing
-                            motor vehicles.
-                        </p>
-                        <button>View Services →</button>
-                    </div>
-
-                    <div className="service-card">
-                        <h3>Driving Licence</h3>
-                        <p>
-                            Apply for, renew and manage your driving licence.
-                        </p>
-                        <button>View Services →</button>
-                    </div>
-
-                    <div className="service-card">
-                        <h3>Revenue Licence</h3>
-                        <p>
-                            Apply for and renew motor vehicle revenue licences.
-                        </p>
-                        <button>View Services →</button>
-                    </div>
-
-                    <div className="service-card">
+                    <div className="other-service-tile">
+                        <span>01</span>
                         <h3>Vehicle Information</h3>
                         <p>
-                            Access information and services related to
-                            registered vehicles.
+                            Access information related to registered vehicles.
                         </p>
-                        <button>View Services →</button>
+                        <button>View →</button>
                     </div>
 
-                    <div className="service-card">
+                    <div className="other-service-tile">
+                        <span>02</span>
                         <h3>Number Plates</h3>
                         <p>
-                            Services related to vehicle number plates and
-                            number plate reservations.
+                            Number plate information, replacement and
+                            reservation services.
                         </p>
-                        <button>View Services →</button>
+                        <button>View →</button>
                     </div>
 
-                    <div className="service-card">
+                    <div className="other-service-tile">
+                        <span>03</span>
                         <h3>Document Services</h3>
                         <p>
-                            Request replacements and other vehicle-related
-                            documents.
+                            Access duplicate certificates and other
+                            vehicle documents.
                         </p>
-                        <button>View Services →</button>
+                        <button>View →</button>
+                    </div>
+
+                    <div className="other-service-tile">
+                        <span>04</span>
+                        <h3>Revenue Licence</h3>
+                        <p>
+                            Information about revenue licence issuance
+                            and renewal.
+                        </p>
+                        <button>View →</button>
+                    </div>
+
+                    <div className="other-service-tile">
+                        <span>05</span>
+                        <h3>Vehicle Inspection</h3>
+                        <p>
+                            Vehicle inspection requirements and
+                            related information.
+                        </p>
+                        <button>View →</button>
+                    </div>
+
+                    <div className="other-service-tile">
+                        <span>06</span>
+                        <h3>Forms & Documents</h3>
+                        <p>
+                            Find application forms and supporting documents.
+                        </p>
+                        <button>View →</button>
                     </div>
 
                 </div>
