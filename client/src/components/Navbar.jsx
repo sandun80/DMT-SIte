@@ -14,7 +14,9 @@ function Navbar() {
 
                     <div className="top-links">
                         <a href="#">සිංහල</a>
+                        <span className="top-divider">|</span>
                         <a href="#">தமிழ்</a>
+                        <span className="top-divider">|</span>
                         <a href="#">English</a>
                     </div>
                 </div>
