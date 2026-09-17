@@ -73,15 +73,15 @@
 
     justify-content: space-between;
 
-    padding: 26px 0;
+    padding: 24px 0;
 
     border: none;
 
     background: none;
 
-    color: #003b70;
+    color: #245088;
 
-    font-size: 15px;
+    font-size: 16px;
 
     font-weight: 600;
 
@@ -93,7 +93,7 @@
 }
 
 .accordion-button:hover {
-    color: #0066b3;
+    color: #942c18;
 }
 
 
@@ -102,9 +102,9 @@
 ================================= */
 
 .accordion-icon {
-    width: 25px;
+    width: 28px;
 
-    height: 25px;
+    height: 28px;
 
     display: flex;
 
@@ -112,15 +112,22 @@
 
     justify-content: center;
 
-    border: 1px solid #0066b3;
+    border: 1.5px solid #245088;
 
     border-radius: 50%;
 
-    color: #0066b3;
+    color: #245088;
 
     font-size: 18px;
 
-    font-weight: 400;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.accordion-button:hover .accordion-icon {
+    border-color: #f6cb10;
+    background-color: #245088;
+    color: #f6cb10;
 }
 
 
@@ -131,9 +138,9 @@
 .accordion-content {
     padding: 0 10px 20px 0;
 
-    color: #666;
+    color: #4b5563;
 
-    font-size: 20px;
+    font-size: 17px;
 
     line-height: 1.7;
 }
@@ -145,17 +152,19 @@
 .accordion-content h4 {
     margin: 0 0 15px;
 
-    color: #003b70;
+    color: #245088;
 
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .accordion-content h5 {
     margin: 25px 0 10px;
 
-    color: #003b70;
+    color: #942c18;
 
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .accordion-content ul,
@@ -179,14 +188,16 @@
 
     margin-top: 5px;
 
-    color: #0066b3;
+    color: #245088;
 
     font-weight: 600;
 
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .accordion-content a:hover {
+    color: #942c18;
     text-decoration: underline;
 }
 
@@ -199,6 +210,8 @@
     text-align: center;
 
     font-size: 32px;
+
+    color: #245088;
 
     margin-bottom: 40px;
 }
@@ -224,15 +237,17 @@
 .service-card {
     width: 1000px;
 
-    padding: 30px;
+    padding: 34px;
 
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e1e7ed;
 
-    border-top: 4px solid #1d4ed8;
+    border-top: 4px solid #245088;
 
-    border-radius: 19px;
+    border-radius: 16px;
 
     background: white;
+
+    box-shadow: 0 4px 20px rgba(36, 80, 136, 0.06);
 
     box-sizing: border-box;
 
@@ -246,29 +261,35 @@
 }
 
 .service-card:nth-child(2) {
-    border-top-color: #1e3a8a;
+    border-top-color: #f6cb10;
 }
 
 .service-card:nth-child(3) {
-    border-top-color: #374151;
+    border-top-color: #942c18;
 }
 
 .service-num {
     font-size: 13px;
 
-    color: #6b7280;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #942c18;
 }
 
 .service-card h3 {
-    margin: 2px 0 12px;
+    margin: 4px 0 12px;
 
     font-size: 30px;
+
+    color: #245088;
 }
 
 .service-card > p {
-    color: #6b7280;
+    color: #4b5563;
 
-    font-size: 18px;
+    font-size: 17px;
 
     line-height: 1.6;
 
@@ -305,22 +326,27 @@
 .service-link {
     display: inline-block;
 
+    margin-top: 12px;
+
     border: none;
 
-    font-size: large;
+    font-size: 16px;
 
     background: transparent;
 
-    color: #1d4ed8;
+    color: #245088;
 
-    font-weight: bold;
+    font-weight: 700;
 
     text-decoration: none;
 
     cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .service-link:hover {
+    color: #942c18;
+    transform: translateX(4px);
     text-decoration: underline;
 }
 

@@ -159,7 +159,7 @@
     font-size: 48px;
     font-weight: 700;
 
-    color: #003b70;
+    color: #245088;
 
     letter-spacing: -1px;
 }
@@ -167,19 +167,24 @@
 .welcome-title p {
     margin: 8px 0 12px;
 
-    font-size: 18px;
+    font-size: 19px;
 
-    color: #555;
+    color: #942c18;
+    font-weight: 600;
 }
 
 .welcome-title span {
-    display: block;
+    display: inline-block;
 
-    font-size: 16px;
+    font-size: 15px;
 
-    color: #0066b3;
+    color: #245088;
 
-    font-weight: 500;
+    font-weight: 600;
+    padding: 4px 16px;
+    border-radius: 20px;
+    background: rgba(36, 80, 136, 0.08);
+    border: 1px solid rgba(246, 203, 16, 0.4);
 }
 
 /* =========================================
@@ -273,11 +278,11 @@
 .welcome-tile:hover {
     transform: translateY(-8px);
 
-    box-shadow: 0 20px 42px rgba(0, 59, 112, 0.2);
+    box-shadow: 0 20px 42px rgba(36, 80, 136, 0.25);
 
-    background: #003b70;
+    background: #245088;
 
-    border-color: #003b70;
+    border-color: #245088;
 
     color: white;
 }
@@ -298,7 +303,7 @@
 
     font-weight: 700;
 
-    color: #0066b3;
+    color: #245088;
 
     letter-spacing: 2px;
 
@@ -306,7 +311,7 @@
 }
 
 .welcome-tile:hover .tile-number {
-    color: #7cc2ff;
+    color: #f6cb10;
 }
 
 /* =========================================
@@ -321,7 +326,7 @@
     background: #eaf1f7;
     margin-bottom: 18px;
     position: relative;
-    box-shadow: inset 0 0 0 1px rgba(0, 59, 112, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(36, 80, 136, 0.08);
 }
 
 .tile-image {
@@ -340,7 +345,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 59, 112, 0) 65%, rgba(0, 59, 112, 0.22) 100%);
+    background: linear-gradient(180deg, rgba(36, 80, 136, 0) 65%, rgba(36, 80, 136, 0.25) 100%);
     opacity: 0;
     transition: opacity 0.35s ease;
     pointer-events: none;
@@ -371,7 +376,7 @@
 
     font-weight: 700;
 
-    color: #003b70;
+    color: #245088;
 
     transition: color 0.3s ease;
 }
@@ -393,7 +398,7 @@
 }
 
 .welcome-tile:hover .tile-content p {
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* =========================================
@@ -404,7 +409,7 @@
     width: 44px;
     height: 44px;
 
-    border: 1.5px solid #0066b3;
+    border: 1.5px solid #245088;
 
     border-radius: 50%;
 
@@ -415,7 +420,7 @@
 
     font-size: 20px;
 
-    color: #0066b3;
+    color: #245088;
 
     background: transparent;
 
@@ -429,7 +434,7 @@
 .welcome-tile:hover .tile-arrow {
     background: #ffffff;
 
-    color: #003b70;
+    color: #245088;
 
     border-color: #ffffff;
 

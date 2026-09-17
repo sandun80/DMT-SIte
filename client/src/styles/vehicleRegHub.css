@@ -10,7 +10,8 @@
 ================================ */
 
 .vehicle-reg-hub-header {
-    background: linear-gradient(135deg, #003b70, #0066b3);
+    background: linear-gradient(135deg, #1b3e6d 0%, #245088 100%);
+    border-bottom: 4px solid #f6cb10;
     color: white;
     padding: 65px 30px;
 }
@@ -24,11 +25,10 @@
     display: block;
     margin-bottom: 15px;
 
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
-
-    opacity: 0.8;
+    color: #f6cb10;
 }
 
 .vehicle-reg-hub-header h1 {
@@ -86,7 +86,7 @@
 }
 
 .vehicle-reg-hub-section-heading > span {
-    color: #0066b3;
+    color: #942c18;
 
     font-size: 13px;
     font-weight: 700;
@@ -97,7 +97,7 @@
 .vehicle-reg-hub-section-heading h2 {
     margin: 0 0 8px;
 
-    color: #003b70;
+    color: #245088;
 
     font-size: 28px;
 }
@@ -105,10 +105,9 @@
 .vehicle-reg-hub-section-heading p {
     margin: 0;
 
-    color: #777;
+    color: #55697d;
 
     font-size: 15px;
-    line-height: 1.6;
 }
 
 
@@ -125,31 +124,23 @@
 
 
 /* ================================
-   FORM
+   FORM CARD
 ================================ */
 
 .vehicle-reg-hub-form {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 
-    gap: 30px;
+    padding: 24px 30px;
 
-    padding: 25px 20px;
+    border-bottom: 1px solid #e5e7eb;
 
-    background: white;
-
-    border-bottom: 1px solid #dfe5eb;
-
-    transition:
-        background-color 0.2s ease,
-        padding-left 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .vehicle-reg-hub-form:hover {
-    background: #f9fbfd;
-
-    padding-left: 27px;
+    background: #f9fafb;
 }
 
 
@@ -162,7 +153,7 @@
 
     margin-bottom: 8px;
 
-    color: #0066b3;
+    color: #942c18;
 
     font-size: 12px;
     font-weight: 700;
@@ -177,7 +168,7 @@
 .vehicle-reg-hub-form h3 {
     margin: 0 0 7px;
 
-    color: #003b70;
+    color: #245088;
 
     font-size: 18px;
     font-weight: 600;
@@ -203,10 +194,10 @@
 
     padding: 10px 17px;
 
-    border: 1px solid #0066b3;
-    border-radius: 4px;
+    border: 1.5px solid #245088;
+    border-radius: 6px;
 
-    color: #0066b3;
+    color: #245088;
 
     font-size: 13px;
     font-weight: 600;
@@ -215,11 +206,12 @@
 
     transition:
         background-color 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .vehicle-reg-hub-download:hover {
-    background: #0066b3;
+    background: #245088;
     color: white;
 }
 
@@ -355,7 +347,8 @@
 
     padding: 25px 30px;
 
-    background: #003b70;
+    background: #245088;
+    border-bottom: 3px solid #f6cb10;
 
     color: white;
 
@@ -651,17 +644,15 @@
 }
 
 .vehicle-reg-submit-button {
-
     border: none;
-
-    background: #005baa;
-
+    background: linear-gradient(135deg, #245088, #1b3e6d);
     color: white;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .vehicle-reg-submit-button:hover {
-
-    background: #003b70;
+    background: linear-gradient(135deg, #942c18, #7a2212);
 }
 
 
