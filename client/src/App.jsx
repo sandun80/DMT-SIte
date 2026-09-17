@@ -9,6 +9,8 @@ import VehicleReg from "./pages/VehicleReg";
 import VehicleInspection from "./pages/VehicleInspection";
 import DrivingLicence from "./pages/DrivingLicence";
 import VehicleRegHub from "./pages/VehicleRegHub";
+import VehicleInspectionHub from "./pages/VehicleInspectionHub";
+import DrivingLicenceHub from "./pages/DrivingLicenceHub";
 
 function AppContent() {
   const location = useLocation();
@@ -25,6 +27,8 @@ function AppContent() {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/other-services" element={<ServicesPage />} />
         <Route path="/vehiclehub" element={<VehicleRegHub />} />
+        <Route path="/vehicle-inspection-hub" element={<VehicleInspectionHub />} />
+        <Route path="/driving-licence-hub" element={<DrivingLicenceHub />}/>
       </Routes>
 
       <Footer />

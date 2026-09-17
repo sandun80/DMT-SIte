@@ -1,115 +1,137 @@
-.vehicle-inspection-hub {
+.driving-licence-hub {
     min-height: 100vh;
     background: #f5f7fa;
     color: #333;
 }
 
 
-/* HEADER */
+/* =================================
+   HEADER
+================================= */
 
-.vehicle-inspection-hub-header {
+.driving-licence-hub-header {
     background: linear-gradient(135deg, #003b70, #0066b3);
     color: white;
     padding: 65px 30px;
 }
 
-.vehicle-inspection-hub-header-content {
+.driving-licence-hub-header-content {
     max-width: 1150px;
     margin: auto;
 }
 
-.vehicle-inspection-hub-header span {
+.driving-licence-hub-header span {
     display: block;
     margin-bottom: 15px;
+
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
+
     opacity: 0.8;
 }
 
-.vehicle-inspection-hub-header h1 {
+.driving-licence-hub-header h1 {
     margin: 0 0 15px;
     font-size: 44px;
 }
 
-.vehicle-inspection-hub-header p {
+.driving-licence-hub-header p {
     max-width: 700px;
     margin: 0;
+
     font-size: 17px;
     line-height: 1.7;
+
     opacity: 0.9;
 }
 
 
-/* MAIN */
+/* =================================
+   MAIN
+================================= */
 
-.vehicle-inspection-hub-container {
+.driving-licence-hub-container {
     max-width: 1150px;
     margin: auto;
+
     padding: 65px 30px;
 }
 
-
-/* SECTION */
-
-.vehicle-inspection-hub-section {
+.driving-licence-hub-section {
     margin-bottom: 60px;
 }
 
-.vehicle-inspection-hub-section-heading {
+
+/* =================================
+   SECTION HEADING
+================================= */
+
+.driving-licence-hub-section-heading {
     display: flex;
     gap: 22px;
+
     margin-bottom: 30px;
 }
 
-.vehicle-inspection-hub-section-heading > span {
+.driving-licence-hub-section-heading > span {
     padding-top: 5px;
+
     color: #0066b3;
+
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-.vehicle-inspection-hub-section-heading h2 {
+.driving-licence-hub-section-heading h2 {
     margin: 0 0 8px;
+
     color: #003b70;
+
     font-size: 30px;
 }
 
-.vehicle-inspection-hub-section-heading p {
+.driving-licence-hub-section-heading p {
     margin: 0;
+
     color: #777;
+
     font-size: 15px;
 }
 
 
-/* TASK LIST */
+/* =================================
+   TASK LIST
+================================= */
 
-.vehicle-inspection-hub-task-list {
+.driving-licence-hub-task-list {
     border-top: 1px solid #dfe5eb;
 }
 
-.vehicle-inspection-hub-task {
+.driving-licence-hub-task {
     display: flex;
     align-items: center;
+
     gap: 25px;
 
     padding: 25px 20px;
 
     background: white;
+
     border-bottom: 1px solid #dfe5eb;
 
     transition: background 0.2s ease;
 }
 
-.vehicle-inspection-hub-task:hover {
+.driving-licence-hub-task:hover {
     background: #f8fafc;
 }
 
 
 /* NUMBER */
 
-.vehicle-inspection-hub-task-number {
+.driving-licence-hub-task-number {
     min-width: 35px;
 
     color: #0066b3;
@@ -121,11 +143,11 @@
 
 /* CONTENT */
 
-.vehicle-inspection-hub-task-content {
+.driving-licence-hub-task-content {
     flex: 1;
 }
 
-.vehicle-inspection-hub-task-content h3 {
+.driving-licence-hub-task-content h3 {
     margin: 0 0 7px;
 
     color: #003b70;
@@ -133,24 +155,26 @@
     font-size: 19px;
 }
 
-.vehicle-inspection-hub-task-content p {
+.driving-licence-hub-task-content p {
     margin: 0;
 
     color: #777;
 
     font-size: 14px;
+
     line-height: 1.5;
 }
 
 
-/* START BUTTON */
+/* BUTTON */
 
-.vehicle-inspection-hub-task-button {
+.driving-licence-hub-task-button {
     flex-shrink: 0;
 
     padding: 10px 18px;
 
     border: 1px solid #0066b3;
+
     border-radius: 4px;
 
     background: white;
@@ -163,7 +187,7 @@
     cursor: pointer;
 }
 
-.vehicle-inspection-hub-task-button:hover {
+.driving-licence-hub-task-button:hover {
     background: #0066b3;
     color: white;
 }
@@ -173,8 +197,9 @@
    MODAL
 ================================= */
 
-.vehicle-inspection-task-overlay {
+.driving-licence-task-overlay {
     position: fixed;
+
     inset: 0;
 
     z-index: 9999;
@@ -188,7 +213,7 @@
     background: rgba(0, 25, 50, 0.65);
 }
 
-.vehicle-inspection-task-modal {
+.driving-licence-task-modal {
     width: 100%;
     max-width: 950px;
 
@@ -207,12 +232,15 @@
 }
 
 
-/* MODAL HEADER */
+/* =================================
+   MODAL HEADER
+================================= */
 
-.vehicle-inspection-task-header {
+.driving-licence-task-header {
     display: flex;
-    justify-content: space-between;
+
     align-items: flex-start;
+    justify-content: space-between;
 
     padding: 25px 30px;
 
@@ -221,7 +249,7 @@
     color: white;
 }
 
-.vehicle-inspection-task-header span {
+.driving-licence-task-header span {
     display: block;
 
     margin-bottom: 7px;
@@ -233,17 +261,20 @@
     opacity: 0.7;
 }
 
-.vehicle-inspection-task-header h2 {
+.driving-licence-task-header h2 {
     margin: 0;
 
     font-size: 23px;
 }
 
-.vehicle-inspection-task-close {
+.driving-licence-task-close {
     width: 38px;
     height: 38px;
 
+    flex-shrink: 0;
+
     border: 1px solid rgba(255,255,255,0.5);
+
     border-radius: 50%;
 
     background: transparent;
@@ -255,20 +286,22 @@
     cursor: pointer;
 }
 
-.vehicle-inspection-task-close:hover {
+.driving-licence-task-close:hover {
     background: rgba(255,255,255,0.15);
 }
 
 
-/* MODAL BODY */
+/* =================================
+   MODAL BODY
+================================= */
 
-.vehicle-inspection-task-body {
+.driving-licence-task-body {
     overflow-y: auto;
 
     padding: 35px;
 }
 
-.vehicle-inspection-task-body h3 {
+.driving-licence-task-body h3 {
     margin: 0 0 8px;
 
     color: #003b70;
@@ -276,7 +309,7 @@
     font-size: 25px;
 }
 
-.task-description {
+.driving-task-description {
     margin: 0 0 25px;
 
     color: #666;
@@ -285,9 +318,11 @@
 }
 
 
-/* FORM SECTION */
+/* =================================
+   FORM SECTION
+================================= */
 
-.task-form-section {
+.driving-task-section {
     margin-bottom: 20px;
 
     padding: 25px;
@@ -299,7 +334,7 @@
     border-radius: 6px;
 }
 
-.task-form-section h4 {
+.driving-task-section h4 {
     margin: 0 0 20px;
 
     padding-bottom: 10px;
@@ -312,9 +347,11 @@
 }
 
 
-/* FORM GRID */
+/* =================================
+   FORM GRID
+================================= */
 
-.task-form-grid {
+.driving-task-grid {
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
@@ -323,23 +360,27 @@
 }
 
 
-/* INPUT */
+/* =================================
+   INPUT
+================================= */
 
-.task-input {
+.driving-input {
     display: flex;
     flex-direction: column;
+
     gap: 7px;
 }
 
-.task-input label {
+.driving-input label {
     color: #374151;
 
     font-size: 13px;
+
     font-weight: 600;
 }
 
-.task-input input,
-.task-input select {
+.driving-input input,
+.driving-input select {
     width: 100%;
 
     padding: 11px 13px;
@@ -347,52 +388,73 @@
     box-sizing: border-box;
 
     border: 1px solid #d1d5db;
+
     border-radius: 4px;
 
     background: white;
 
+    color: #333;
+
     font-family: inherit;
+
     font-size: 14px;
 
     outline: none;
 }
 
-.task-input input:focus,
-.task-input select:focus {
+.driving-input input:focus,
+.driving-input select:focus {
     border-color: #0066b3;
 
-    box-shadow:
-        0 0 0 3px rgba(0,102,179,0.08);
+    box-shadow: 0 0 0 3px rgba(0,102,179,0.08);
 }
 
 
-/* FILE */
+/* =================================
+   UPLOAD
+================================= */
 
-.task-file {
-    width: 100%;
-    padding: 15px;
+.driving-upload {
+    display: flex;
+    flex-direction: column;
 
-    box-sizing: border-box;
+    gap: 10px;
+
+    padding: 18px;
 
     border: 1px dashed #b8c4d0;
 
     background: #fafcfe;
+
+    border-radius: 5px;
+}
+
+.driving-upload label {
+    color: #003b70;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.driving-upload input {
+    font-size: 12px;
 }
 
 
-/* ACTIONS */
+/* =================================
+   ACTIONS
+================================= */
 
-.task-actions {
+.driving-task-actions {
     display: flex;
+
     justify-content: flex-end;
 
     gap: 12px;
-
-    padding-top: 5px;
 }
 
-.task-cancel,
-.task-primary {
+.driving-task-cancel,
+.driving-task-primary {
     padding: 11px 22px;
 
     border-radius: 4px;
@@ -403,7 +465,7 @@
     cursor: pointer;
 }
 
-.task-cancel {
+.driving-task-cancel {
     border: 1px solid #d1d5db;
 
     background: white;
@@ -411,7 +473,7 @@
     color: #555;
 }
 
-.task-primary {
+.driving-task-primary {
     border: none;
 
     background: #005baa;
@@ -419,99 +481,71 @@
     color: white;
 }
 
-.task-primary:hover {
+.driving-task-primary:hover {
     background: #003b70;
 }
 
 
-/* MOBILE */
+/* =================================
+   MOBILE
+================================= */
 
 @media (max-width: 700px) {
 
-    .vehicle-inspection-hub-header {
+    .driving-licence-hub-header {
         padding: 50px 22px;
     }
 
-    .vehicle-inspection-hub-header h1 {
+    .driving-licence-hub-header h1 {
         font-size: 34px;
     }
 
-    .vehicle-inspection-hub-container {
+    .driving-licence-hub-container {
         padding: 45px 20px;
     }
 
-    .vehicle-inspection-hub-task {
+    .driving-licence-hub-task {
         align-items: flex-start;
     }
 
-    .vehicle-inspection-hub-task-button {
+    .driving-licence-hub-task-button {
         padding: 9px 14px;
     }
 
-    .vehicle-inspection-task-overlay {
+    .driving-licence-task-overlay {
         padding: 10px;
     }
 
-    .vehicle-inspection-task-modal {
+    .driving-licence-task-modal {
         max-height: 96vh;
     }
 
-    .vehicle-inspection-task-header {
+    .driving-licence-task-header {
         padding: 20px;
     }
 
-    .vehicle-inspection-task-header h2 {
+    .driving-licence-task-header h2 {
         font-size: 19px;
     }
 
-    .vehicle-inspection-task-body {
+    .driving-licence-task-body {
         padding: 20px;
     }
 
-    .task-form-section {
+    .driving-task-section {
         padding: 20px;
     }
 
-    .task-form-grid {
+    .driving-task-grid {
         grid-template-columns: 1fr;
     }
 
-    .task-actions {
+    .driving-task-actions {
         flex-direction: column-reverse;
     }
 
-    .task-cancel,
-    .task-primary {
+    .driving-task-cancel,
+    .driving-task-primary {
         width: 100%;
     }
-}
-
-
-.vehicle-inspection-hub-task {
-    opacity: 0;
-    animation: sectionFadeUp 0.8s ease-out forwards;
-}
-
-.vehicle-inspection-hub-task:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.vehicle-inspection-hub-task:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.vehicle-inspection-hub-task:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-.vehicle-inspection-hub-task:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-.vehicle-inspection-hub-task:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-.vehicle-inspection-hub-task:nth-child(6) {
-    animation-delay: 0.6s;
 }

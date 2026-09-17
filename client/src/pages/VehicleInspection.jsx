@@ -176,7 +176,7 @@ function VehicleInspection() {
                         </div>
                     </div>
 
-                    <a className="service-link" href="/vehicle-inspection">
+                    <a className="service-link" href="/vehicle-inspection-hub">
                         Open inspection hub →
                     </a>
                 </div>

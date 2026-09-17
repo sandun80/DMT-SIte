@@ -185,7 +185,7 @@ function DrivingLicence() {
                         </div>
                     </div>
 
-                    <a className="service-link" href="/driving-licence">
+                    <a className="service-link" href="/driving-licence-hub">
                         Open licence hub →
                     </a>
                 </div>
