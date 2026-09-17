@@ -214,7 +214,7 @@ function Services() {
 
                     <a
                         className="service-link"
-                        href="/vehicle-registrationform"
+                        href="/vehiclehub"
                     >
                         Open hub →
                     </a>
