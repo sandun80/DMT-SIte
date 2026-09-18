@@ -1,16 +1,17 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import dmtLogo from "../assets/DMT_logo.png";
 import emblem from "../assets/Emblem.png";
 import "../styles/Login.css";
 
 function Login() {
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // Backend login will be connected here later
-        console.log("Login submitted");
+        navigate("/dashboard");
     };
 
     return (

@@ -108,10 +108,6 @@ function Services() {
                                     </li>
                                 </ul>
 
-                                <a href="/vehicle-registration">
-                                    View complete registration services →
-                                </a>
-
                             </div>
                         )}
 
@@ -154,9 +150,6 @@ function Services() {
                                         procedure before applying.
                                     </p>
 
-                                    <a href="/revenue-licence">
-                                        View revenue licence services →
-                                    </a>
 
                                 </div>
                             )}
@@ -200,10 +193,7 @@ function Services() {
                                         reservation.
                                     </p>
 
-                                    <a href="/number-plates">
-                                        View number plate services →
-                                    </a>
-
+                                   
                                 </div>
                             )}
 
