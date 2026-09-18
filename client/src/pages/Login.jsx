@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import dmtLogo from "../assets/DMT_logo.png";
-import emblem from "../assets/Emblem.png"
+import emblem from "../assets/Emblem.png";
 import "../styles/Login.css";
 
 function Login() {
@@ -17,28 +17,62 @@ function Login() {
     return (
         <div className="dmt-login-page">
             <div className="dmt-login-card">
+                {/* Top brand color stripe representing logo colors */}
+                <div className="dmt-card-top-stripe">
+                    <span className="stripe-segment stripe-yellow"></span>
+                    <span className="stripe-segment stripe-maroon"></span>
+                    <span className="stripe-segment stripe-blue"></span>
+                </div>
+
                 {/* LEFT SIDE */}
                 <div className="dmt-login-info">
-                    <div className="dmt-login-logo">
-                        <img src={dmtLogo} alt="Department of Motor Traffic" />
+                    <div className="dmt-login-logo-wrapper">
+                        <div className="dmt-login-logo-card">
+                            <img src={dmtLogo} alt="Department of Motor Traffic Logo" />
+                        </div>
                     </div>
 
-                    <span className="dmt-login-label">
-                        DEPARTMENT OF MOTOR TRAFFIC
-                    </span>
+                    <div className="dmt-login-branding">
+                        <span className="dmt-login-label">
+                            DEPARTMENT OF MOTOR TRAFFIC
+                        </span>
+                        <span className="dmt-login-label-si">
+                            මෝටර් රථ ප්‍රවාහන දෙපාර්තමේන්තුව
+                        </span>
+                    </div>
+
+                    <div className="dmt-login-divider">
+                        <span className="divider-yellow"></span>
+                        <span className="divider-maroon"></span>
+                        <span className="divider-blue"></span>
+                    </div>
 
                     <h1>Welcome Back</h1>
 
                     <p>
-                        Sign in to access the Department of Motor Traffic web
-                        portal services.
+                        Sign in to access the Department of Motor Traffic official web portal services.
                     </p>
+
+                    <div className="dmt-login-features">
+                        <div className="dmt-login-feature-item">
+                            <span className="feature-check">✓</span>
+                            <span>Vehicle Registration & Transfer Services</span>
+                        </div>
+                        <div className="dmt-login-feature-item">
+                            <span className="feature-check">✓</span>
+                            <span>Driving Licence Application & Renewals</span>
+                        </div>
+                        <div className="dmt-login-feature-item">
+                            <span className="feature-check">✓</span>
+                            <span>Official Government of Sri Lanka Services</span>
+                        </div>
+                    </div>
                 </div>
 
                 {/* RIGHT SIDE */}
                 <div className="dmt-login-form-container">
                     <div className="dmt-login-form-header">
-                        <span>LOGIN PORTAL</span>
+                        <span className="dmt-portal-tag">LOGIN PORTAL</span>
 
                         <h2>Sign In</h2>
 
@@ -102,8 +136,8 @@ function Login() {
 
                         {/* LOGIN */}
                         <button type="submit" className="dmt-login-button">
-                            Sign In
-                            <span>→</span>
+                            <span>Sign In</span>
+                            <span className="dmt-button-arrow">→</span>
                         </button>
                     </form>
 

@@ -1,26 +1,42 @@
 /* =========================================
-   LOGIN PAGE
+   DMT LOGIN PAGE
+   Color Palette derived directly from DMT Logo:
+   - Yellow Arcs:     #f6cb10 / #f7d615 (Golden Amber)
+   - Middle Beam:     #942c18 (Maroon / Crimson Red)
+   - Bottom Stripe:   #245088 (Official Government Navy Blue)
+   - DMT Typography:  #1e293b / #2e3a47 (Charcoal Dark)
 ========================================= */
+
+:root {
+    --dmt-blue-primary: #245088;
+    --dmt-blue-dark: #16365f;
+    --dmt-blue-deep: #0f2542;
+    --dmt-blue-light: #3567a8;
+    --dmt-maroon: #942c18;
+    --dmt-maroon-dark: #7a2212;
+    --dmt-maroon-light: #b03820;
+    --dmt-yellow: #f6cb10;
+    --dmt-yellow-bright: #f7d615;
+    --dmt-yellow-glow: rgba(246, 203, 16, 0.25);
+    --dmt-text-dark: #1e293b;
+    --dmt-text-muted: #55697d;
+    --dmt-border-light: #e2e8f0;
+}
 
 .dmt-login-page {
     min-height: 100vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 40px 25px;
-
+    padding: 50px 24px;
     background:
-        linear-gradient(
-            135deg,
-            #eef4f9,
-            #f8fafc
-        );
-
+        radial-gradient(circle at 15% 15%, rgba(36, 80, 136, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(246, 203, 16, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(148, 44, 24, 0.04) 0%, transparent 60%),
+        linear-gradient(135deg, #f0f4f8 0%, #f9fafb 100%);
     box-sizing: border-box;
+    position: relative;
 }
-
 
 /* =========================================
    LOGIN CARD
@@ -28,215 +44,300 @@
 
 .dmt-login-card {
     width: 100%;
-    max-width: 1000px;
-
+    max-width: 1040px;
     display: grid;
-    grid-template-columns: 42% 58%;
-
+    grid-template-columns: 44% 56%;
+    position: relative;
     overflow: hidden;
-
-    background: white;
-
-    border: 1px solid #e1e7ed;
-    border-radius: 10px;
-
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #dce4ec;
     box-shadow:
-        0 25px 70px rgba(0, 35, 70, 0.12);
-
-    animation: loginCardAppear 0.7s ease-out forwards;
+        0 20px 60px rgba(15, 37, 66, 0.12),
+        0 4px 16px rgba(15, 37, 66, 0.06);
+    animation: loginCardAppear 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* TOP SIGNATURE STRIPE (Yellow / Maroon / Blue from DMT Logo) */
+.dmt-card-top-stripe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    display: flex;
+    z-index: 20;
+}
+
+.stripe-segment {
+    height: 100%;
+}
+
+.stripe-yellow {
+    flex: 1.2;
+    background: linear-gradient(90deg, #f7d615, #f6cb10);
+}
+
+.stripe-maroon {
+    flex: 1;
+    background: linear-gradient(90deg, #942c18, #a8331d);
+}
+
+.stripe-blue {
+    flex: 2;
+    background: linear-gradient(90deg, #245088, #16365f);
+}
 
 /* =========================================
    LEFT INFORMATION PANEL
 ========================================= */
 
 .dmt-login-info {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 55px 45px;
+    background: linear-gradient(150deg, #0f2542 0%, #16365f 45%, #245088 100%);
+    color: #ffffff;
+}
 
-    background:
-        linear-gradient(
-            145deg,
-            #003b70,
-            #005baa
-        );
+/* Ambient Logo Glow Accents */
+.dmt-login-info::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(246, 203, 16, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
 
-    color: white;
+.dmt-login-info::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -60px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(148, 44, 24, 0.22) 0%, transparent 70%);
+    pointer-events: none;
+}
 
+/* LOGO CARD BADGE */
+.dmt-login-logo-wrapper {
     position: relative;
+    z-index: 2;
+    margin-bottom: 24px;
 }
 
-
-/* LOGO */
-
-.dmt-login-logo {
-    margin-bottom: 25px;
+.dmt-login-logo-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 14px 22px;
+    border-radius: 14px;
+    box-shadow:
+        0 12px 28px rgba(11, 28, 54, 0.35),
+        0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 3px solid #f6cb10;
+    border-bottom: 3px solid #942c18;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dmt-login-logo img {
-    width: 275px;
-    height: 175px;
+.dmt-login-logo-card:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 16px 36px rgba(11, 28, 54, 0.42),
+        0 0 18px rgba(246, 203, 16, 0.3);
+}
 
+.dmt-login-logo-card img {
+    width: 210px;
+    max-width: 100%;
+    height: auto;
+    display: block;
     object-fit: contain;
-
-   background-color: white;
-    padding: 8px;
-
-    border-radius: 20%;
-
-    box-sizing: border-box;
 }
 
-
-/* LABEL */
+/* BRANDING LABELS */
+.dmt-login-branding {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 12px;
+}
 
 .dmt-login-label {
-    margin-bottom: 15px;
-
-    font-size: 11px;
+    display: block;
+    font-size: 11.5px;
     font-weight: 700;
-
     letter-spacing: 2px;
-
-    opacity: 0.75;
+    color: #f6cb10;
+    text-transform: uppercase;
 }
 
+.dmt-login-label-si {
+    display: block;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin-top: 3px;
+}
 
-/* TITLE */
+/* DIVIDER STRIPE */
+.dmt-login-divider {
+    display: flex;
+    width: 80px;
+    height: 3px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 14px 0 20px;
+    position: relative;
+    z-index: 2;
+}
 
+.divider-yellow {
+    flex: 1;
+    background: #f6cb10;
+}
+
+.divider-maroon {
+    flex: 1;
+    background: #942c18;
+}
+
+.divider-blue {
+    flex: 1;
+    background: #ffffff;
+}
+
+/* TITLE & DESCRIPTION */
 .dmt-login-info h1 {
-    margin: 0 0 15px;
-
-    font-size: 38px;
-    line-height: 1.15;
+    margin: 0 0 14px;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    letter-spacing: -0.5px;
 }
-
-
-/* DESCRIPTION */
 
 .dmt-login-info p {
-    max-width: 350px;
-
-    margin: 0;
-
-    font-size: 15px;
-
-    line-height: 1.7;
-
-    color: rgba(255, 255, 255, 0.85);
+    max-width: 360px;
+    margin: 0 0 28px;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.84);
+    position: relative;
+    z-index: 2;
 }
 
-
-/* LINE */
-
-.dmt-login-line {
-    width: 45px;
-    height: 2px;
-
-    margin: 30px 0 18px;
-
-    background: rgba(255, 255, 255, 0.7);
+/* FEATURES LIST */
+.dmt-login-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-
-/* SMALL TEXT */
-
-.dmt-login-info small {
-    font-size: 12px;
-
-    color: rgba(255, 255, 255, 0.65);
+.dmt-login-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
+.feature-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(246, 203, 16, 0.18);
+    border: 1px solid rgba(246, 203, 16, 0.5);
+    color: #f6cb10;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
 
 /* =========================================
-   FORM CONTAINER
+   RIGHT SIDE - FORM CONTAINER
 ========================================= */
 
 .dmt-login-form-container {
-    padding: 55px 60px;
-
+    padding: 55px 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: #ffffff;
 }
 
-
-/* =========================================
-   FORM HEADER
-========================================= */
-
+/* FORM HEADER */
 .dmt-login-form-header {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
-.dmt-login-form-header span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #0066b3;
-
+.dmt-portal-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(148, 44, 24, 0.08);
+    border: 1px solid rgba(148, 44, 24, 0.2);
+    color: #942c18;
     font-size: 11px;
     font-weight: 700;
-
     letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
 .dmt-login-form-header h2 {
-    margin: 0 0 8px;
-
-    color: #003b70;
-
-    font-size: 30px;
+    margin: 0 0 6px;
+    color: #16365f;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
 }
 
 .dmt-login-form-header p {
     margin: 0;
-
-    color: #777;
-
+    color: #55697d;
     font-size: 14px;
 }
 
-
 /* =========================================
-   FORM
+   FORM ELEMENTS
 ========================================= */
 
 .dmt-login-form {
     display: flex;
     flex-direction: column;
-
-    gap: 22px;
+    gap: 20px;
 }
-
-
-/* =========================================
-   INPUT GROUP
-========================================= */
 
 .dmt-login-input-group {
     display: flex;
     flex-direction: column;
-
     gap: 8px;
 }
 
 .dmt-login-input-group label {
-    color: #374151;
-
-    font-size: 13px;
+    color: #243547;
+    font-size: 13.5px;
     font-weight: 600;
 }
-
-
-/* =========================================
-   PASSWORD LABEL
-========================================= */
 
 .dmt-login-password-label {
     display: flex;
@@ -246,171 +347,144 @@
 
 .dmt-login-forgot {
     padding: 0;
-
     border: none;
-
     background: transparent;
-
-    color: #0066b3;
-
-    font-size: 12px;
-
+    color: #942c18;
+    font-size: 12.5px;
+    font-weight: 600;
     cursor: pointer;
+    transition: color 0.2s ease;
 }
 
 .dmt-login-forgot:hover {
+    color: #7a2212;
     text-decoration: underline;
 }
 
-
-/* =========================================
-   INPUT
-========================================= */
-
 .dmt-login-input-group input {
     width: 100%;
-
-    padding: 13px 14px;
-
+    padding: 13px 15px;
     box-sizing: border-box;
-
-    border: 1px solid #d1d5db;
-    border-radius: 5px;
-
-    background: white;
-
-    color: #333;
-
+    border: 1.5px solid #d4dde6;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1e293b;
     font-family: inherit;
     font-size: 14px;
-
     outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
 
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
+.dmt-login-input-group input::placeholder {
+    color: #9aa8b8;
 }
 
 .dmt-login-input-group input:focus {
-    border-color: #0066b3;
-
-    box-shadow:
-        0 0 0 3px rgba(0, 102, 179, 0.08);
+    border-color: #245088;
+    box-shadow: 0 0 0 3.5px rgba(36, 80, 136, 0.12);
 }
-
-
-/* =========================================
-   PASSWORD
-========================================= */
 
 .dmt-login-password-wrapper {
     position: relative;
 }
 
 .dmt-login-password-wrapper input {
-    padding-right: 65px;
+    padding-right: 68px;
 }
 
 .dmt-login-show-password {
     position: absolute;
-
     right: 12px;
     top: 50%;
-
     transform: translateY(-50%);
-
-    padding: 4px;
-
+    padding: 5px 8px;
     border: none;
-
     background: transparent;
-
-    color: #0066b3;
-
+    color: #245088;
     font-size: 12px;
     font-weight: 600;
-
     cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.2s ease, background 0.2s ease;
 }
 
+.dmt-login-show-password:hover {
+    color: #942c18;
+    background: rgba(36, 80, 136, 0.06);
+}
 
-/* =========================================
-   REMEMBER ME
-========================================= */
-
+/* REMEMBER ME */
 .dmt-login-options {
     display: flex;
     justify-content: space-between;
-
-    margin-top: -4px;
+    align-items: center;
+    margin-top: -2px;
 }
 
 .dmt-login-remember {
     display: flex;
     align-items: center;
-
     gap: 8px;
-
-    color: #666;
-
-    font-size: 13px;
-
+    color: #55697d;
+    font-size: 13.5px;
     cursor: pointer;
+    user-select: none;
 }
 
 .dmt-login-remember input {
-    width: 15px;
-    height: 15px;
-
-    accent-color: #0066b3;
+    width: 16px;
+    height: 16px;
+    accent-color: #245088;
+    cursor: pointer;
 }
 
-
 /* =========================================
-   LOGIN BUTTON
+   LOGIN BUTTON (Branded Gradient)
 ========================================= */
 
 .dmt-login-button {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 12px;
-
-    padding: 13px 20px;
-
-    margin-top: 5px;
-
+    padding: 14px 22px;
+    margin-top: 6px;
     border: none;
-    border-radius: 5px;
-
-    background: #005baa;
-
-    color: white;
-
+    border-radius: 8px;
+    background: linear-gradient(135deg, #245088 0%, #16365f 100%);
+    color: #ffffff;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
-
+    letter-spacing: 0.3px;
     cursor: pointer;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
+    box-shadow: 0 6px 18px rgba(36, 80, 136, 0.26);
+    border: 1px solid rgba(246, 203, 16, 0.25);
+    transition: all 0.25s ease;
 }
 
 .dmt-login-button:hover {
-    background: #003b70;
-
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #16365f 0%, #942c18 100%);
+    box-shadow: 0 8px 24px rgba(148, 44, 24, 0.32);
+    transform: translateY(-1.5px);
+    border-color: rgba(246, 203, 16, 0.45);
 }
 
-.dmt-login-button span {
+.dmt-login-button:active {
+    transform: translateY(0);
+}
+
+.dmt-button-arrow {
+    color: #f6cb10;
     font-size: 17px;
+    font-weight: 700;
+    transition: transform 0.2s ease;
 }
 
+.dmt-login-button:hover .dmt-button-arrow {
+    transform: translateX(4px);
+}
 
 /* =========================================
    FOOTER
@@ -419,93 +493,81 @@
 .dmt-login-footer {
     display: flex;
     justify-content: space-between;
-
-    margin-top: 40px;
-    padding-top: 20px;
-
-    border-top: 1px solid #e5e7eb;
-
-    color: #999;
-
-    font-size: 11px;
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid #e8edf3;
+    color: #718096;
+    font-size: 12px;
+    font-weight: 500;
 }
 
-
 /* =========================================
-   ANIMATION
+   ANIMATIONS & RESPONSIVE
 ========================================= */
 
 @keyframes loginCardAppear {
-
     from {
         opacity: 0;
-
-        transform:
-            translateY(30px)
-            scale(0.98);
+        transform: translateY(24px) scale(0.985);
     }
-
     to {
         opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
+        transform: translateY(0) scale(1);
     }
-
 }
 
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 750px) {
-
+@media (max-width: 860px) {
     .dmt-login-page {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     .dmt-login-card {
         grid-template-columns: 1fr;
+        max-width: 520px;
     }
 
     .dmt-login-info {
-        padding: 35px 30px;
-    }
-
-    .dmt-login-info h1 {
-        font-size: 30px;
+        padding: 40px 32px;
+        text-align: center;
+        align-items: center;
     }
 
     .dmt-login-info p {
         max-width: none;
     }
 
-    .dmt-login-form-container {
-        padding: 40px 30px;
+    .dmt-login-features {
+        align-items: flex-start;
+        text-align: left;
+        width: 100%;
+        max-width: 320px;
     }
 
+    .dmt-login-form-container {
+        padding: 40px 32px;
+    }
 }
 
-
-@media (max-width: 450px) {
-
+@media (max-width: 480px) {
     .dmt-login-page {
-        padding: 10px;
+        padding: 16px 12px;
     }
 
     .dmt-login-info {
-        padding: 30px 25px;
+        padding: 32px 20px;
+    }
+
+    .dmt-login-info h1 {
+        font-size: 28px;
     }
 
     .dmt-login-form-container {
-        padding: 35px 22px;
+        padding: 32px 20px;
     }
 
     .dmt-login-footer {
         flex-direction: column;
-        gap: 5px;
+        gap: 6px;
+        text-align: center;
     }
-
 }
