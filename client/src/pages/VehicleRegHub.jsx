@@ -440,7 +440,7 @@ function VehicleRegHub() {
                                     MTA 3
                                 </span>
 
-                                <h3>Mortgage-Related Registration</h3>
+                               / <h3>Mortgage-Related Registration</h3>
 
                                 <p>
                                     Record or update a mortgage-related
