@@ -1,70 +1,86 @@
-import React from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import "../styles/Navbar.css";
 import { NavLink } from "react-router-dom";
 import emblem from "../assets/Emblem.png";
 import dmtLogo from "../assets/DMT_logo.png";
 
 function Navbar() {
+    const headerRef = useRef(null);
+    const [headerHeight, setHeaderHeight] = useState(0);
+
+    useLayoutEffect(() => {
+        const updateHeight = () => {
+            if (headerRef.current) {
+                setHeaderHeight(headerRef.current.offsetHeight);
+            }
+        };
+
+        updateHeight();
+        window.addEventListener("resize", updateHeight);
+        return () => window.removeEventListener("resize", updateHeight);
+    }, []);
+
     return (
         <>
-            {/* Top Government Bar */}
-            <div className="top-bar">
-                <div className="top-bar-container">
-                    <span>Government of Sri Lanka</span>
+            <div className="site-header" ref={headerRef}>
+                {/* Top Government Bar */}
+                <div className="top-bar">
+                    <div className="top-bar-container">
+                        <span>Government of Sri Lanka</span>
 
-                    <div className="top-links">
-                        <a href="#">සිංහල</a>
-                        <span className="top-divider">|</span>
-                        <a href="#">தமிழ்</a>
-                        <span className="top-divider">|</span>
-                        <a href="#">English</a>
+                        <div className="top-links">
+                            <a href="#">සිංහල</a>
+                            <span className="top-divider">|</span>
+                            <a href="#">தமிழ்</a>
+                            <span className="top-divider">|</span>
+                            <a href="#">English</a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            {/* Main Navbar */}
-            <nav className="navbar">
-                <div className="navbar-container">
-                    {/* Logo */}
-                    <div className="navbar-logo">
-                        <div className="logo-placeholder">
-                            <img src={emblem} alt="Emblem" />
+                {/* Main Navbar */}
+                <nav className="navbar">
+                    <div className="navbar-container">
+                        {/* Logo */}
+                        <div className="navbar-logo">
+                            <div className="logo-placeholder">
+                                <img src={emblem} alt="Emblem" />
+                            </div>
+
+                            <div className="logo-text">
+                                <h2>Department of Motor Traffic</h2>
+                                <span>මෝටර් රථ ප්‍රවාහන දෙපාර්තමේන්තුව</span>
+                            </div>
+
+                            <div className="logo-placeholder logo-placeholder-right">
+                                <img
+                                    src={dmtLogo}
+                                    alt="Department of Motor Traffic Logo"
+                                />
+                            </div>
                         </div>
 
-                        <div className="logo-text">
-                            <h2>Department of Motor Traffic</h2>
-                            <span>මෝටර් රථ ප්‍රවාහන දෙපාර්තමේන්තුව</span>
-                        </div>
+                        {/* Navigation Links */}
+                        <div className="nav-links">
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    isActive ? "active" : ""
+                                }
+                            >
+                                Home
+                            </NavLink>
 
-                        <div className="logo-placeholder logo-placeholder-right">
-                            <img
-                                src={dmtLogo}
-                                alt="Department of Motor Traffic Logo"
-                            />
-                        </div>
-                    </div>
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) =>
+                                    isActive ? "active" : ""
+                                }
+                            >
+                                About Us
+                            </NavLink>
 
-                    {/* Navigation Links */}
-                    <div className="nav-links">
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                isActive ? "active" : ""
-                            }
-                        >
-                            Home
-                        </NavLink>
-
-                        <NavLink
-                            to="/about"
-                            className={({ isActive }) =>
-                                isActive ? "active" : ""
-                            }
-                        >
-                            About Us
-                        </NavLink>
-
-                        {/* <NavLink
+                            {/* <NavLink
                             to="/services"
                             className={({ isActive }) =>
                                 isActive ? "active" : ""
@@ -73,33 +89,38 @@ function Navbar() {
                             Services
                         </NavLink> */}
 
-                        <NavLink
-                            to="/downloads"
-                            className={({ isActive }) =>
-                                isActive ? "active" : ""
-                            }
-                        >
-                            Downloads
-                        </NavLink>
+                            <NavLink
+                                to="/downloads"
+                                className={({ isActive }) =>
+                                    isActive ? "active" : ""
+                                }
+                            >
+                                Downloads
+                            </NavLink>
 
-                        <NavLink
-                            to="/contact"
-                            className={({ isActive }) =>
-                                isActive ? "active" : ""
-                            }
-                        >
-                            Contact
-                        </NavLink>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) =>
+                                    isActive ? "active" : ""
+                                }
+                            >
+                                Contact
+                            </NavLink>
 
-                        <NavLink to="/login" className="login-btn">
-                            Login
-                        </NavLink>
+                            <NavLink to="/login" className="login-btn">
+                                Login
+                            </NavLink>
+                        </div>
+
+                        {/* Mobile Menu Button */}
+                        <button className="menu-button">☰</button>
                     </div>
-
-                    {/* Mobile Menu Button */}
-                    <button className="menu-button">☰</button>
-                </div>
-            </nav>
+                </nav>
+            </div>
+            <div
+                className="site-header-spacer"
+                style={{ height: headerHeight }}
+            />
         </>
     );
 }

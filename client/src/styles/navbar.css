@@ -1,4 +1,16 @@
 /* ==============================
+   SITE HEADER (fixed, never scrolls)
+================================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* ==============================
    TOP GOVERNMENT BAR
 ================================= */
 
@@ -64,12 +76,6 @@
     background-color: #ffffff;
     border-bottom: 1px solid #e1e7ed;
     box-shadow: 0 2px 10px rgba(36, 80, 136, 0.08);
-
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
 }
 
 .navbar-container {
