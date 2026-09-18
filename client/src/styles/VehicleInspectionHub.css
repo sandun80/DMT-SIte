@@ -8,7 +8,8 @@
 /* HEADER */
 
 .vehicle-inspection-hub-header {
-    background: linear-gradient(135deg, #003b70, #0066b3);
+    background: linear-gradient(135deg, #1b3e6d 0%, #245088 100%);
+    border-bottom: 4px solid #f6cb10;
     color: white;
     padding: 65px 30px;
 }
@@ -21,10 +22,10 @@
 .vehicle-inspection-hub-header span {
     display: block;
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
-    opacity: 0.8;
+    color: #f6cb10;
 }
 
 .vehicle-inspection-hub-header h1 {
@@ -64,7 +65,7 @@
 
 .vehicle-inspection-hub-section-heading > span {
     padding-top: 5px;
-    color: #0066b3;
+    color: #942c18;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -72,13 +73,13 @@
 
 .vehicle-inspection-hub-section-heading h2 {
     margin: 0 0 8px;
-    color: #003b70;
+    color: #245088;
     font-size: 30px;
 }
 
 .vehicle-inspection-hub-section-heading p {
     margin: 0;
-    color: #777;
+    color: #55697d;
     font-size: 15px;
 }
 
@@ -112,7 +113,7 @@
 .vehicle-inspection-hub-task-number {
     min-width: 35px;
 
-    color: #0066b3;
+    color: #942c18;
 
     font-size: 13px;
     font-weight: 700;
@@ -128,7 +129,7 @@
 .vehicle-inspection-hub-task-content h3 {
     margin: 0 0 7px;
 
-    color: #003b70;
+    color: #245088;
 
     font-size: 19px;
 }
@@ -150,21 +151,22 @@
 
     padding: 10px 18px;
 
-    border: 1px solid #0066b3;
-    border-radius: 4px;
+    border: 1.5px solid #245088;
+    border-radius: 6px;
 
     background: white;
 
-    color: #0066b3;
+    color: #245088;
 
     font-size: 13px;
     font-weight: 600;
 
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .vehicle-inspection-hub-task-button:hover {
-    background: #0066b3;
+    background: #245088;
     color: white;
 }
 
@@ -216,7 +218,8 @@
 
     padding: 25px 30px;
 
-    background: #003b70;
+    background: #245088;
+    border-bottom: 3px solid #f6cb10;
 
     color: white;
 }
@@ -414,13 +417,15 @@
 .task-primary {
     border: none;
 
-    background: #005baa;
+    background: linear-gradient(135deg, #245088, #1b3e6d);
 
     color: white;
+    font-weight: 600;
+    transition: all 0.2s ease;
 }
 
 .task-primary:hover {
-    background: #003b70;
+    background: linear-gradient(135deg, #942c18, #7a2212);
 }
 
 

@@ -9,7 +9,9 @@ function AboutUs() {
       <section className="about-header">
         <div className="about-header-content">
           <h1>About Us</h1>
-          <p>Department of Motor Traffic - Sri Lanka</p>
+          <p>
+            Department of Motor Traffic • මෝටර් රථ ප්‍රවාහන දෙපාර්තමේන්තුව
+          </p>
         </div>
       </section>
 

@@ -8,7 +8,8 @@
 }
 
 .other-services-header {
-    background: linear-gradient(135deg, #003b70, #0066b3);
+    background: linear-gradient(135deg, #1b3e6d 0%, #245088 100%);
+    border-bottom: 4px solid #f6cb10;
     padding: 60px 30px;
     color: white;
 }
@@ -23,6 +24,7 @@
     max-width: 1100px;
     margin: auto;
     font-size: 17px;
+    opacity: 0.92;
 }
 
 .other-services-section {
@@ -34,7 +36,7 @@
 .other-services-section h2 {
     margin: 0 0 12px;
     text-align: center;
-    color: #003b70;
+    color: #245088;
     font-size: 32px;
 }
 
@@ -42,7 +44,7 @@
     max-width: 700px;
     margin: 0 auto 40px;
     text-align: center;
-    color: #666;
+    color: #55697d;
     font-size: 16px;
     line-height: 1.7;
 }
@@ -54,53 +56,61 @@
 }
 
 .other-service-tile {
-    padding: 25px;
+    padding: 26px;
     background: white;
     border: 1px solid #e1e7ed;
-    border-top: 3px solid #0066b3;
-    border-radius: 9px;
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
+    border-top: 4px solid #245088;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(36, 80, 136, 0.05);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-top-color 0.25s ease;
 }
 
 .other-service-tile:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 59, 112, 0.10);
+    transform: translateY(-5px);
+    border-top-color: #f6cb10;
+    box-shadow: 0 12px 28px rgba(36, 80, 136, 0.12);
 }
 
 .other-service-tile span {
     display: block;
     margin-bottom: 12px;
-    color: #0066b3;
-    font-size: 12px;
+    color: #942c18;
+    font-size: 13px;
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .other-service-tile h3 {
     margin: 0 0 10px;
-    color: #003b70;
+    color: #245088;
     font-size: 20px;
+    font-weight: 700;
 }
 
 .other-service-tile p {
     margin: 0 0 20px;
-    color: #666;
+    color: #55697d;
     font-size: 14px;
     line-height: 1.6;
 }
 
 .other-service-tile button {
-    padding: 8px 15px;
+    padding: 9px 18px;
     border: none;
-    border-radius: 4px;
-    background: #005baa;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #245088, #1b3e6d);
     color: white;
-    font-size: 13px;
+    font-size: 13.5px;
+    font-weight: 600;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .other-service-tile button:hover {
-    background: #003b70;
+    background: linear-gradient(135deg, #942c18, #7a2212);
+    box-shadow: 0 4px 14px rgba(148, 44, 24, 0.3);
 }
 
 @media (max-width: 900px) {
